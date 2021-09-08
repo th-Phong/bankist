@@ -17,8 +17,8 @@ const account1 = {
     "2020-07-11T23:36:17.929Z",
     "2020-07-12T10:51:36.790Z",
   ],
-  currency: "EUR",
-  locale: "pt-PT", // de-DE
+  currency: "VND",
+  locale: "vn-VN", // de-DE
 };
 
 const account2 = {
@@ -43,8 +43,8 @@ const account2 = {
 
 const accounts = [account1, account2];
 
-//////////////////
-//  ELEMENTS
+///////////////////////////////////////////////////////
+//   ELEMENTS
 const labelWelcome = document.querySelector(".welcome");
 const labelDate = document.querySelector(".date");
 const labelBalance = document.querySelector(".balance__value");
@@ -75,12 +75,13 @@ const currencies = new Map([
   ["EUR", "Euro"],
   ["GBP", "Pound sterling"],
 ]);
+
 /////////////////////////////////////////////////
 //    DEMO for displayMovements()
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-///   FUNCTIONS
+//   FUNCTIONS
 
 const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
@@ -132,7 +133,6 @@ const displayMovements = function (acc, sort = false) {
     containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
-//displayMovements(movements);
 
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
